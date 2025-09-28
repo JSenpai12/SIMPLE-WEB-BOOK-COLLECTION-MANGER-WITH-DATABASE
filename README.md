@@ -33,7 +33,6 @@ BookCollectionManager/
 │ ├── addBookStyle.css
 │ ├── updateBookStyle.css
 
-<img width="1867" height="881" alt="Screenshot 2025-09-16 150628" src="https://github.com/user-attachments/assets/21f91253-1a48-4cd2-a294-10d724a3cfcb" />
 <hr>
 
 
