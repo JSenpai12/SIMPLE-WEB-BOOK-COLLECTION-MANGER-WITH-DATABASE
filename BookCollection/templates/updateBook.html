@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='updateBookStyle.css') }}">
+</head>
+<body>
+    <div class="add-box">
+        <div>
+            <button class="back-to-books">Back to Books</button>
+            <p class="title">Edit Book</p>
+            <p class="description">Update the book information below</p>
+
+            <form class="form-add-book" method="POST">
+
+            <div>
+                <label for="title">Title*</label>
+                <div>
+                    <input placeholder="Edit book title" name="title" id="title" value="{{ entry[1] }}" required>
+                </div>
+            </div>
+
+            <div>
+                <label for="author">Author*</label>
+                <div>
+                    <input placeholder="Enter book author" name="author" id="author" value="{{ entry[2] }}" required>
+                </div>
+            </div>
+                
+            <div>
+                <label for="genre">Genre*</label>
+                <div>
+                    <select name="genre" id="genre" value="{{ entry[3] }}"required>
+                    <option value="" disabled selected hidden>Select a genre</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="romance">Romance</option>
+                    <option value="science-fiction">Science-Fiction</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="biography">Biography</option>
+                    <option value="history">History</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="poety">Poetry</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                    <option value="self-help">Self-Help</option>
+                    <option value="other">Other</option>
+                </select>
+                </div>
+            </div>
+                
+            <div>
+                <label for="year">Publication Year*</label>
+                <div>
+                    <input
+                    type="number"
+                    id="year"
+                    name="year"
+                    placeholder="Year"
+                    min="1800"
+                    max="2025"
+                    required
+                    >
+                </div>
+            </div>    
+                
+            <div class="form-buttons">
+                <button type="submit">Update Book</button>
+
+                <a href="{{ url_for('home') }}">
+                    <button>Cancel</button>
+                </a>
+                
+            </div>
+            
+        </form>
+        </div>
+        
+    </div>
+</body>
+</html>
